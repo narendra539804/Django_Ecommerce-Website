@@ -19,6 +19,8 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '2w7%qyl!vlw-@m5+#foyfk_ail8xy1&6hjxdk%0e^i9&xg!lxw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -47,11 +49,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Narenkart.urls'
-
+import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/ "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,3 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT=BASE_DIR/'static'
+STATICFILES_DIRS=[
+    'Narenkart\static',
+]
