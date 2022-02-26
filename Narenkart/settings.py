@@ -123,3 +123,6 @@ STATIC_ROOT=BASE_DIR/'static'
 STATICFILES_DIRS=[
     'Narenkart\static',
 ]
+
+
+AUTH_USER_MODEL='accounts.Account'
