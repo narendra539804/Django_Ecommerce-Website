@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'category',
     'accounts',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -124,5 +125,8 @@ STATICFILES_DIRS=[
     'Narenkart\static',
 ]
 
+# media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
 
 AUTH_USER_MODEL='accounts.Account'
